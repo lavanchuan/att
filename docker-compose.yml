@@ -43,13 +43,13 @@ services:
         max-file: "3"
 
   wrk:
-    build: .
+    build: ./wrk
     stdin_open: true
     tty: true
     command: >
       /bin/sh -c "
       while true; do
-        wrk -t10 -c1000 -d5s -R20000 -s header.lua https://tanmong.online/truyen/ruc-ro-sau-ly-hon;
+        wrk -t10 -c1000 -d5s -R20000 -s header.lua https://tanmong.online;
         sleep 0;
       done
       "
