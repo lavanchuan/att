@@ -6,7 +6,7 @@
 
     <groupId>demo</groupId>
     <artifactId>AttackWeb</artifactId>
-    <version></version>
+    <version>de</version>
     <name>AttackWeb</name>
 
     <properties>
