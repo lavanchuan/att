@@ -12,3 +12,13 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+
+  att:
+    build:
+      context: /URL
+      dockerfile: Dockerfile
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
