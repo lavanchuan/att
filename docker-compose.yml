@@ -22,3 +22,23 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+
+  ab:
+    build:
+      context: ./ab
+      dockerfile: Dockerfile
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+    ulimits:
+      nofile:
+        soft: 100000
+        hard: 100000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
