@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM curlimages/curl:latest
 
 COPY att.sh att.sh
 
