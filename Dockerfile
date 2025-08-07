@@ -8,10 +8,8 @@ COPY --from=build /target/AttackWeb-1.jar app/AttackWeb.jar
 # Cài các thư viện cần thiết
 RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
-    libgobject-2.0-0 \
     libnspr4 \
     libnss3 \
-    libnssutil3 \
     libdbus-1-3 \
     libatk1.0-0 \
     libatk-bridge2.0-0 \
