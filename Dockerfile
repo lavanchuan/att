@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:18.0.1-jdk-slim
-COPY --from=build /target/AttackWeb.de.jar app/AttackWeb.jar
+COPY --from=build /target/AttackWeb-de.jar app/AttackWeb.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app/AttackWeb.jar"]
